@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="10dp"
-    android:layout_marginBottom="100dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_marginTop="40dp"
-        android:id="@+id/imageViewImportant"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_warning_black_24dp" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imageViewImportant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_warning_black_24dp" />
 
-    <ImageView
-        android:id="@+id/imageViewTodo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_check_box_outline_blank_black_24dp"
-        android:layout_toRightOf="@id/imageViewImportant"
-        android:layout_alignBottom="@id/imageViewImportant"
-        />
+        <ImageView
+            android:id="@+id/imageViewTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_check_box_outline_blank_black_24dp"
+            android:layout_toRightOf="@id/imageViewImportant"
+            android:layout_alignBottom="@id/imageViewImportant"
+            />
 
-    <ImageView
-        android:id="@+id/imageViewIdea"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_wb_incandescent_black_24dp"
-        android:layout_toRightOf="@id/imageViewTodo"
-        android:layout_alignBottom="@id/imageViewImportant"/>
+        <ImageView
+            android:id="@+id/imageViewIdea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_wb_incandescent_black_24dp"
+            android:layout_toRightOf="@id/imageViewTodo"
+            android:layout_alignBottom="@id/imageViewImportant"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageViewTodo"
+
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
 
@@ -52,4 +57,4 @@
         android:layout_below="@id/txtTitle"
         />
 
-</RelativeLayout>
+</LinearLayout>
